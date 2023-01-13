@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<data>
+	<List name="ReadData_Standard">
+			<Type name = "ReadData"/>
+			<Algorithm name = "Standard"/>
+	</List>
+	<List name="ReadData_Standard">
+			<Type name = "RawData_Position_Calculation"/>
+			<Algorithm name = "FFT"/>
+	</List>
+	<List name="ReadData_Standard">
+			<Type name = "RawData_Velocity_Calculation"/>
+			<Algorithm name = "FFT"/>
+	</List>
+	
+	<List name="Conversion_dBV2W">
+			<Type name = "Conversion"/>
+			<Algorithm name = "dBV2W"/>
+	</List>
+	<List name="Conversion_W2RCS">
+			<Type name = "Conversion"/>
+			<Algorithm name = "W2RCS"/>
+	</List>
+	<List name="Conversion_W2dBm">
+			<Type name = "Conversion"/>
+			<Algorithm name = "W2dBm"/>
+	</List>
+	
+	<List name="Filter_CFARCV">
+			<Type name = "Filter"/>
+			<Algorithm name = "CFAR_CV"/>
+	</List>
+	<List name="Filter_Peaks">
+			<Type name = "Filter"/>
+			<Algorithm name = "Peaks"/>
+	</List>
+	
+	<List name="ObjectList_Position">
+			<Type name = "ObjectList"/>
+			<Algorithm name = "Position_ObjList"/>
+			<Save name = "Yes"/>
+	</List>
+	<List name="ObjectList_Velocity">
+			<Type name = "ObjectList"/>
+			<Algorithm name = "Velocity_ObjList"/>
+			<Save name = "Yes"/>
+	</List>
+	
+	<List name="Plot_Surface_Position_Save">
+			<Type name = "Plot"/>
+			<Algorithm name = "Vispy_Position"/>
+			<Save name = "Yes"/>
+	</List>		
+	<List name="Plot_Surface_Velocity_Save">
+			<Type name = "Plot"/>
+			<Algorithm name = "Vispy_Velocity"/>
+			<Save name = "Yes"/>
+	</List>
+		<List name="Matplot_Scatter_Position_Save">
+			<Type name = "Plot"/>
+			<Algorithm name = "Matplot_Position"/>
+			<Save name = "Yes"/>
+	</List>
+
+</data>
