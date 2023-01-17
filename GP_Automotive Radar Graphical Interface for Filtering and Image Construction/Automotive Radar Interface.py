@@ -17,11 +17,10 @@ from xml.dom import minidom
 
 a = []
 
-
-
-tree = ET.parse('Radar.xml')
+tree = ET.parse("C:/Users/dnjsc/Desktop/GP/Radar Project/Radar.xml")
 root = tree.getroot()
-child = root.getchildren()
+child = list(root)
+#child = root.getchildren()
 for x in root:
     a.append(x.attrib)
 class Ui_MainWindow(object):
