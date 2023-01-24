@@ -6,8 +6,10 @@
 ## GUI Layout
 - Home
 <img src="./img/home.png">
+
 - Measurement
 <img src="./img/measurement.png">
+
 - Output
 <img src="./img/output.png">
 <img src="./img/output_2.png">
