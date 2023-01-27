@@ -1,6 +1,6 @@
 # Artificial Neural Networks Modeling project
 
-## Car Detection
+## 1. Car Detection
 
 ### Model description
 - For the first modeling project, we used some libraries of python such as NumPy and matplotlib,
@@ -22,13 +22,28 @@ Layers, Layer Sizes and Convolutional Layers) to make different combinations in 
 we have a 3x64 layer convolutional network. Then, we modified the number of neurons and
 epochs to generate several models.
 
+|               | Number of layers | Number of neurons | Activation function |
+|---------------|------------------|-------------------|---------------------|
+| Input layer   | 1                | 4000              | -                   |
+| Hidden layers | 3                | 64                | Relu                |
+|               |                  | 64                | Relu                |
+|               |                  | 64                | Tanh                |
+| Output layer  | 1                | 2 (Car / No car)  | Sigmoid             |
+
 ### Learning, test, and validation protocols
 - Size of the database and database division
 
+
+|                 | Number of data | Car | No car |
+|-----------------|----------------|-----|--------|
+| Training data   | 1050           | 560 | 500    |
+| Validation data | 105            | 56  | 50     |
+| Test data       | 170            | 170 | 0      |
+
 ### Learnig curve
+<img src="./img/learning_curve_car.png">
 
-
-## Face-mask Detection
+## 2. Face-mask Detection
 
 ### Model description
 - The model is a feedforward backpropagation network to classify images into two categories,
@@ -38,8 +53,21 @@ which are those who wear a mask and those who don’t.
 - We used a different method for the second project, still on python, but using the activation
 function “Softmax”, additionally to “ReLU”, to enhance efficiency.
 
+|               | Number of layers | Number of neurons            | Activation function |
+|---------------|------------------|------------------------------|---------------------|
+| Input layer   | 1                | 12288 (64*64*3)              | -                   |
+| Hidden layers | 2                | 84                           | Relu                |
+|               |                  | 50                           |                     |
+| Output layer  | 1                | 2 (With Mask / Without Mask) | SoftMax             |
+
 ### Learning, test, and validation protocols
 - Size of the database and database division
+
+|                 | Number of data | With Mask | Without Mask |
+|-----------------|----------------|-----------|--------------|
+| Training data   | 10000          | 5000      | 5000         |
+| Validation data | 800            | 400       | 400          |
+| Test data       | 992            | 483       | 509          |
 - Description of the input and output data format: Input data are resized to 64*64(color
 images). Output data are classified to “With Mask” or “Without Mask”.
 - Normalization: All data are normalized before feeding to the network by using the mean
@@ -52,3 +80,5 @@ log(Q(x)).
 - Learning rate: 0.001
 
 ### Learnig curve
+<img src="./img/learning_curve_mask.png">
+
