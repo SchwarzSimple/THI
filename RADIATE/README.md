@@ -8,5 +8,6 @@ to the architecture with multiple backbones trained by each specific weather dat
 ## Suggested Methods
 - Ex2
 <img src="./img/Ex2_Architecture.png">
+
 - Ex3
 <img src="./img/Ex3_Architecture.png">
